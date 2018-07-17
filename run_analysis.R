@@ -89,4 +89,4 @@ secondDataSet <- dcast(baseData, subject + activity ~ variable, mean)
 
 names(secondDataSet)[-c(1:2)] <- paste("[mean of]" , names(secondDataSet)[-c(1:2)] )
 
-write.table(secondDataSet, "tidy_data.txt", sep = ",")
+write.table(secondDataSet, "tidy_data.txt", sep = ",", row.names=FALSE)
